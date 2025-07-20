@@ -1,0 +1,37 @@
+<div id='person_select_container'>
+    <div id="mode_select"></div>
+    <div class="person_mode" id='active' data-tag="programming">Developer</div>
+    <div class="person_mode" data-tag="art">Artist</div>
+    <script type="module" src="/src/scripts/personmode.ts"></script>
+</div>
+
+<style>
+    #person_select_container{
+        position: relative;
+        padding: 1rem;
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
+        gap: 1rem;
+        z-index: 15;
+    }
+
+    .person_mode{
+        color: var(--secondary);
+        font-size: var(--header_size);
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    #active{
+        color: var(--primary);
+    }
+
+    #mode_select{
+        position: absolute;
+        background-color: var(--secondary);
+        transition: 0.4s ease;
+        z-index: 1;
+    }
+</style>

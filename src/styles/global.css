@@ -1,0 +1,39 @@
+:root {
+    --primary   : #B4B3B1;
+    --secondary : #2F2F2F;
+    --secondary_light : #4A4A4A;
+    --header_size : 2rem;
+    --content_font : "pixelify";
+}
+
+*{
+    margin: 0;
+    border-sizing : border-box;
+    padding: 0;
+    color : var(--secondary_light);
+    font-family: var(--content_font);
+    font-size: 1.2rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1{
+    color: var(--secondary);
+    font-size: clamp(3rem, 6vw, var(--header_size)*4);
+}
+
+h2{
+    font-size: clamp(1rem, 4vw, var(--header_size));
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+@font-face {
+    font-family: "pixelify";
+    font-weight: normal;
+    src: url("/fonts/pixelify_sans/PixelifySans-Regular.ttf");
+}

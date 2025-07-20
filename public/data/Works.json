@@ -1,0 +1,24 @@
+[
+    {
+      "tag" : "programming",
+      "src" : "/Techworks/KecPage.png",
+      "title" : "Website for It Club",
+      "description" : "Website for IT-Club of Kathmandu Engineering College, a vibrant community of technology enthusiasts dedicated to empowering young innovative minds."
+    },
+    {
+      "tag" : "art",
+      "src" : "/Artworks/afro.webp"
+    },
+    {
+      "tag" : "art",
+      "src" : "/Artworks/feel.webp"
+    },
+    {
+      "tag" : "art",
+      "src" : "/Artworks/hiesenberg.webp"
+    },
+    {
+      "tag" : "art",
+      "src" : "/Artworks/myself.jpg"
+    }
+]

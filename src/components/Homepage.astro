@@ -1,0 +1,86 @@
+---
+import MyImg from '@public/temp.png';
+import img   from '@public/Arrow.svg';
+import vslr  from '@public/visualizer.png';
+---
+
+<section>
+    <img src={MyImg.src}/>
+    <img id="home_down_arrow" src={img.src}/>
+    <div id="right_vert_line"></div>
+    <div id="left_vert_line"></div>
+    <div id="home_content">
+        <div class="name">
+            <h1>Aayush Lamsal</h1>
+            <img id="visualizer" src={vslr.src}/>
+        </div>
+        <div class="about">
+            <h2>Software Developer</h2>
+            <br>
+            <h2>Artist</h2>
+        </div>
+    </div>
+</section>
+
+<style>
+
+    section{
+        position : relative;
+        margin : 0;
+        width  : 100vw;
+        height : 100vh;
+    }
+
+    #right_vert_line{
+        position : absolute;
+        right    : 33vw;
+        width  : 1px;
+        height : 100vh;
+        background-color: var(--secondary_light);
+    }
+
+    #left_vert_line{
+        position : absolute;
+        bottom   : 0;
+        left     : 40vw;
+        width  : 1px;
+        height : 30vh;
+        background-color: var(--secondary_light);
+    }
+
+    #home_down_arrow {
+        position: absolute;
+        left    : 23vw;
+        bottom  : 1vw;
+        transform       : scale(0.02, 0.05); /* X = 0.02, Y = 2 */
+        transform-origin: bottom center; /* Make it stretch upwards from the bottom */
+    }
+    #home_content{
+        margin-left: 2rem;
+        width : 50vw;
+        height: 100vh;
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+        align-items     : left;
+    }
+
+    .name{
+        margin-bottom: 3rem;
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+    }
+
+    #visualizer{
+        width: 43vw;
+    }
+
+    section > img{
+        position : absolute;
+        right    : 13vw;
+        bottom   : 0rem;
+        width : 40vw;
+        z-index: 3;
+    }
+</style>
