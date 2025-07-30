@@ -1,6 +1,6 @@
 import {render_work} from "./renderworks";
 
-function init_person_mode () {
+export function init_person_mode () {
     const person_mode = Array.from(document.getElementsByClassName('person_mode'));
     const work_tag = document.getElementById("work_tag");
     const render_container = document.getElementById("render_works_container");
@@ -51,7 +51,3 @@ function init_person_mode () {
         el.addEventListener('click', (event) => update_mode_selector_ui(event.target as HTMLElement));
     })
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    init_person_mode();
-});

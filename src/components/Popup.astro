@@ -1,0 +1,50 @@
+<div class="popup_overlay popup_hideable"></div>
+<div class="popup_div popup_hideable">
+    <div class="popup_text">
+        Hello guys !!
+    </div>
+    <div class="popup_buttons">
+        <button class="cancelButton">cancel</button>
+        <button>hello</button>
+    </div>
+</div>
+
+<style>
+    .popup_overlay {
+        position: fixed;
+        top:  0;
+        left: 0;
+        width:  100vw;
+        height: 100vh;
+        display: none;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+    }
+
+    .popup_div {
+        position: fixed;
+        top:  50%;
+        left: 50%;
+        padding: 4rem;
+        display: none;
+        background-color: var(--primary);
+        transform: translate(-50%, -50%);
+        z-index: 1001;
+    }
+    .popup_render {
+        display:         flex;
+        justify-content: center;
+        align-items:     center;
+        flex-direction:  column;
+        gap: 1rem;
+    }
+    .popup_buttons {
+        display:         flex;
+        justify-content: space-around;
+        align-items:     center;
+        gap: 1rem;
+    }
+    .popup_buttons button{
+        padding: 0.2rem;
+    }
+</style>
