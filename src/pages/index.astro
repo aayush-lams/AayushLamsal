@@ -4,14 +4,18 @@ import Layout  from '@layouts/Layout.astro';
 import Logo    from '@public/logo.svg';
 import Contact from '@components/Contact.astro';
 import Works   from '@components/Works.astro';
+import Popup   from '@components/Popup.astro';
 ---
 
 <Layout>
     <img class='page_logo' src={Logo.src}>
     <Contact />
+    <Popup />
     <HOME />
     <Works />
 </Layout>
+
+<script src = "@scripts/index.ts"> </script>
 
 <style>
     .page_logo{
