@@ -1,14 +1,14 @@
 ---
 import HOME    from '@components/Homepage.astro';
 import Layout  from '@layouts/Layout.astro';
-import Logo    from '@public/logo.svg';
+import Logo    from '@components/Logo.astro';
 import Contact from '@components/Contact.astro';
 import Works   from '@components/Works.astro';
 import Popup   from '@components/Popup.astro';
 ---
 
 <Layout>
-    <img class='page_logo' src={Logo.src}>
+    <Logo />
     <Contact />
     <Popup />
     <HOME />
@@ -16,12 +16,3 @@ import Popup   from '@components/Popup.astro';
 </Layout>
 
 <script src = "@scripts/index.ts"> </script>
-
-<style>
-    .page_logo{
-        position : fixed;
-        top: 0;
-        width: 5rem;
-        z-index: 5;
-    }
-</style>
