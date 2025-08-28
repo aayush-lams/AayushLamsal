@@ -21,6 +21,11 @@
     white-space: normal;
 }
 
+.art{
+    display: flex;
+    flex-direction: column;
+}
 .art img{
-    width: 20vw;
+    width: 70vw;
+    filter: saturate(0.5);
 }

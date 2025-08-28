@@ -26,14 +26,14 @@
     display         : flex;
     justify-content : center;
     align-items     : center;
-    color: var(--secondary_light);
+    color: var(--primary);
     z-index : 4;
 }
 .contact_select_div{
     position : absolute;
     width  : 100%;
     height : 0%;
-    background-color: var(--secondary);
+    background-color: var(--secondary_light);
     transition : height 0.4s ease-in-out;
     z-index : 1;
 }
