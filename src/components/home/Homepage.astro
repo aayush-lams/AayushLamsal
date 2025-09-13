@@ -1,0 +1,90 @@
+<section>
+    <div class="heroMain">
+        <div class="downArrow">↓</div>
+        <div class="heroContent textContent">
+            Hi, I am
+            <span class="authorFancyFont">Aayush Lamsal .</span>
+
+            <br>
+            <span>Developer</span>, <span>Artist</span>
+            and an
+            <span>Explorer</span>
+        </div>
+        <div class="heroContent imgContent"></div>
+    </div>
+</section>
+
+<style>
+    :root{
+        --primaryColorTile: #A64C44;
+        --secondaryColorTile: #658963;
+        --tertiaryColorTile: #969696;
+    }
+    section{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+    .heroMain{
+        position: relative;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .heroContent{
+        flex: 1;
+        backdrop-filter: blur(1px);
+    }
+
+    .authorFancyFont{
+        display: block;
+        font-size: var(--h3Font);
+        letter-spacing: 0ch;
+    }
+
+    .textContent span:not(:first-child){
+        color: var(--primaryAccent);
+        font-family: var(--fancyFont);
+        transition: 0.1s ease;
+        font-size: var(--smallBody);
+    }
+
+    .textContent span:last-child{
+        font-family: var(--quickFont);
+        color: var(--secondaryWhite);
+        font-weight: bold;
+        letter-spacing: 0.3ch;
+    }
+    .imgContent{
+        width: 300px;
+        aspect-ratio: 1;
+        background: url('/testPic.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .downArrow{
+        position: absolute;
+        bottom: 10vh;
+        font-size: var(--h3Font);
+        font-weight: lighter;
+        animation: arrowSign 3s ease infinite;
+        color: var(--secondaryWhite);
+        opacity: 0.5;
+    }
+    @keyframes arrowSign {
+        0% {
+            bottom: 10vh;
+        }
+        50% {
+            bottom: 15vh;
+        }
+        100% {
+            bottom: 10vh;
+        }
+    }
+</style>

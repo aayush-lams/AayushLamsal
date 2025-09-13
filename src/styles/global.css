@@ -1,17 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Quicksand:wght@300..700&display=swap');
 :root {
-    --primary   : #828181;
-    --secondary : #121212;
-    --secondary_light : #4A4A4A;
-    --content_font : "pixelify";
+    /* COLORS */
+    --primary   : #FF2F6A;      /* RED */
+    --secondary : #282828;      /* BLACK */
+    --secondaryWhite : #B8B8B8; /* WHITE */
+    --primaryAccent : #07D5BD;  /* CYAN */
+
+    /* FONT FAMILY */
+    --fancyFont : "Lacquer", system-ui;
+    --quickFont : "Quicksand", sans-serif;
+
+    /* FONT SIZE */
+    --smallBody : 1rem;
+    --normalBody : clamp(1rem, calc(1.2rem + 0.1vw), 2rem);
+
+    --h1Font : clamp(2rem, calc(2rem + 3vw), calc(4rem));
+    --h2Font : clamp(1.2rem, calc(1rem + 1vw), 3rem);
+    --h3Font : 3rem;
 }
 
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    color: var(--primary);
-    font-family: var(--content_font);
-    font-size: clamp(1rem, calc(1.2rem + 0.1vw), 2rem);
+    color: var(--secondaryWhite);
+    font-family: var(--quickFont);
+    font-size: var(--normalBody);
+    letter-spacing: 0.1ch;
 }
 
 li {
@@ -19,11 +34,11 @@ li {
 }
 
 h1{
-    font-size: clamp(2rem, calc(2rem + 3vw), calc(4rem));
+    font-size: var(--h1Font);
 }
 
 h2{
-    font-size: clamp(1.2rem, calc(1rem + 1vw), 3rem);
+    font-size: var(--h2Font);
     font-weight: normal;
 }
 

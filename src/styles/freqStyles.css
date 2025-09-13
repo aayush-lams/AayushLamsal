@@ -1,0 +1,4 @@
+.authorFancyFont{
+    color: var(--primary);
+    font-family: var(--fancyFont);
+}
