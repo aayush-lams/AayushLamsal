@@ -1,5 +1,9 @@
 ---
 import "@styles/global.css";
+import "@styles/freqStyles.css";
+import Navbar  from '@components/navbar/Navbar.astro';
+import Cursor from "@components/cursor/Cursor.astro";
+import Footer from "@components/footer/Footer.astro";
 ---
 
 <!doctype html>
@@ -12,7 +16,10 @@ import "@styles/global.css";
 		<title>Aayush Lamsal</title>
 	</head>
 	<body>
+	    <Cursor />
+	    <Navbar />
 		<slot />
+		<Footer />
 	</body>
 </html>
 
@@ -22,7 +29,27 @@ import "@styles/global.css";
 		margin: 0;
 		padding: 0;
 		width: 100vw;
-		height: 100%;
 		background-color: var(--secondary);
+		cursor: none;
+	}
+	body{
+	    position: relative;
+	    background-image: url("/background.png");
+	    background-size: cover;
+	    background-position: center;
+					background-repeat: no-repeat;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+	body::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.78);
+        background-attachment: fixed;
+        z-index: -1;
 	}
 </style>
