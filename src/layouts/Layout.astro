@@ -16,10 +16,12 @@ import Footer from "@components/footer/Footer.astro";
 		<title>Aayush Lamsal</title>
 	</head>
 	<body>
-	    <Cursor />
+        <div id="main">
+            <Cursor />
 	    <Navbar />
 		<slot />
 		<Footer />
+        </div>
 	</body>
 </html>
 
@@ -28,28 +30,34 @@ import Footer from "@components/footer/Footer.astro";
 	body {
 		margin: 0;
 		padding: 0;
-		width: 100vw;
+	}
+	body {
+        display: flex;
+        justify-content: center;
+        background-color: var(--secondary);
+	}
+	#main{
+	    width: min(100vw, 1920px);
 		background-color: var(--secondary);
+	    position: relative;
+		z-index: 0;
 		cursor: none;
 	}
-	body{
-	    position: relative;
-	    background-image: url("/background.png");
-	    background-size: cover;
-	    background-position: center;
-					background-repeat: no-repeat;
-		background-attachment: fixed;
-		z-index: 0;
-	}
-	body::before{
+	#main::before{
         content: '';
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.78);
-        background-attachment: fixed;
+        background-image: url("/background.png");
+	    background-size: cover;
+	    background-position: center;
+					background-repeat: no-repeat;
+		background-attachment: fixed;
+		opacity: 0.13;
         z-index: -1;
 	}
 </style>
+
+<script src = "@scripts/layout.ts"> </script>

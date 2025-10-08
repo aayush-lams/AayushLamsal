@@ -1,5 +1,3 @@
 - better font hierarchy
-- better cursor interacivity
 - make custom arts for various section
 - make endpoints
-- better carousel

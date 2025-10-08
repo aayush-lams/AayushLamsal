@@ -1,0 +1,7 @@
+Features in dashboard
+- add new techworks
+- add new artworks
+- see my stats
+- login
+- signout
+- simple todo, work on progress tracker or link to one

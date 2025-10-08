@@ -1,9 +1,10 @@
 footer{
-    width: 100vw;
+    width: 100%;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    overflow-x: hidden;
     /* background-color: red; */
 }
 
