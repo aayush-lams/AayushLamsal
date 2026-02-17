@@ -1,0 +1,54 @@
+<footer>
+    <div class="contactHead">
+        -connect with me-
+    </div>
+    <ul>
+        <li> <a href="https://github.com/aayush-lams">                             &gt github </a> </li>
+        <li> <a href="www.linkedin.com/in/aayush-lamsal-ba5332204">                &gt linkedin </a> </li>
+        <li> <a href="https://www.instagram.com/iyushlamsal/">                     &gt instagram </a> </li>
+        <li> <a href="https://github.com/aayush-lams">                             &gt facebook </a> </li>
+        <li> <a href="https://discord.com/users/123456789012345678" target="blank">&gt discord </a> </li>
+    </ul>
+</footer>
+
+<style>
+    footer{
+        width: fit-content;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    footer .contactHead{
+        white-space: nowrap;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    ul li{
+        white-space: nowrap;
+        transition: 0.3s ease;
+    }
+    ul li:hover{
+        color: #BEBEBE;
+        text-shadow: 0 0 3px #AAAAAA;
+        outline: 1px solid var(--secondaryWhiteDim);
+        background-color: var(--secondaryWhiteDim);
+    }
+    ul li a{
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+    }
+    @media screen and (max-width: 1000px) {
+        footer {
+            width: 100%;
+            gap: 1rem;
+        }
+    }
+</style>

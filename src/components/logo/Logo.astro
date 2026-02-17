@@ -1,28 +1,12 @@
-<div id="logo">
-    <a href="/" class="authorFancyFont">
-        Aayush <span>Lamsal</span>
-    </a>
-</div>
+<div id="logo" />
 
 <style>
-    #logo a{
-        transition: width 0.5s ease;
-        width: 4.5ch;
-        display: flex;
-        gap: 0.2rem;
-        overflow-x: hidden;
-    }
-
-    #logo a:hover{
-        width: 12ch;
-        cursor: none;
-    }
-
-    #logo span{
-        border-radius: 0.3rem;
-        padding: 0 0.3rem;
-        color:            var(--secondary);
-        background-color: var(--primary);
-        font: var(--fancyFont);
+    #logo {
+        width: min(10vw, 192px);
+        background-image: url("/testPic.png");
+        /*overflow: hidden;*/
+        aspect-ratio: 1;background-size: cover; /* or 'contain' */
+          background-repeat: no-repeat;
+          background-position: center;
     }
 </style>

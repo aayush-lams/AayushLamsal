@@ -1,24 +1,78 @@
 ---
 import Logo    from '@components/logo/Logo.astro';
-import Personmode from '@components/personMode/Personmode.astro';
+
+const currentPath = Astro.url.pathname;
+
+const items = [
+  { name: "about", href: "/" },
+  { name: "skills", href: "/skills" },
+  { name: "projects", href: "/projects" },
+  { name: "blogs", href: "/blogs" },
+  { name: "contact", href: "/contact" },
+];
 ---
 
 <nav>
     <Logo />
-    <div id="navItems">
-        <Personmode />
+    <div class="myName">
+        Aayush Lamsal
     </div>
+    <ul>
+        {items.map((item) => (
+        <li class={currentPath == item.href ? "active" : ""}>
+            <a href={item.href}>- {item.name}</a>
+        </li>
+        ))}
+    </ul>
 </nav>
 
 <style>
     nav {
-        position: sticky;
-        top: 0px;
-        padding: 0rem 4rem;
-        width: 100%;
+        /*background-color: red;*/
+        padding: 1rem;
+        width: fit-content;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        z-index: 1000;
+        gap: 2rem;
+    }
+
+    .myName{
+        color: var(--primaryRed);
+        font-weight: bold;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    ul li {
+        white-space: nowrap;
+        width: 100%;
+    }
+    ul li a{
+        display: block;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        transition: 0.3s ease;
+    }
+    ul li:hover a{
+        color: #BEBEBE;
+        text-shadow: 0 0 3px #AAAAAA;
+        outline: 1px solid var(--secondaryWhiteDim);
+        background-color: var(--secondaryWhiteDim);
+    }
+    .active{
+        color: #BEBEBE;
+        text-shadow: 0 0 3px #AAAAAA;
+        outline: 1px solid var(--secondaryWhiteDim);
+    }
+    @media screen and (max-width: 1000px) {
+        nav {
+            display: none;
+        }
     }
 </style>
