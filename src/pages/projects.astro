@@ -1,0 +1,64 @@
+---
+import Layout  from '@layouts/Layout.astro';
+import techWorks from '@data/Works.json';
+import '@styles/freqStyles.css';
+---
+
+<Layout>
+    <section>
+        <div class="pageMain">
+            <div class="pageHead">
+                &gt PROJECTS &gt <br><br>
+            </div>
+            <ul>
+                {techWorks.map((work) => (
+                <li>
+                    <a href={work.link}>
+                        <div class="workName">&gt {work.title} &gt</div>
+                        <div class="workDescription">{work.description}</div>
+                    </a>
+                </li>
+                ))}
+            </ul>
+        </div>
+    </section>
+</Layout>
+
+<style>
+section{
+    /*background-color: forestgreen;*/
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+}
+section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+ul li{
+    width: 100%;
+    padding: 0.5rem;
+    transition: 0.3s ease;
+}
+
+ul li a .workName{
+    text-decoration: underline;
+}
+ul li a .workDescription {
+    padding: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ul li:hover {
+    outline: 1px solid var(--secondaryWhiteDim);
+    background-color: var(--secondaryWhiteDim);
+}
+</style>

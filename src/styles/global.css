@@ -1,22 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Lacquer&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 :root {
     /* COLORS */
-    --primary   : #FF2F6A;      /* RED */
-    --secondary : #282828;      /* BLACK */
-    --secondaryWhite : #B8B8B8; /* WHITE */
-    --primaryAccent : #07D5BD;  /* CYAN */
+    --secondary : #181818;      /* BLACK */
+    --secondaryWhite : #AAAAAA; /* WHITE */
+    --secondaryWhiteDim : #404040;
+    --primaryRed : #c9a1a1;
 
     /* FONT FAMILY */
-    --fancyFont : "Lacquer", system-ui;
-    --quickFont : "Quicksand", sans-serif;
+    --font : "JetBrains Mono", monospace;
 
     /* FONT SIZE */
-    --smallBody : 1rem;
-    --normalBody : clamp(1rem, calc(1.2rem + 0.1vw), 2rem);
-
-    --h1Font : clamp(2rem, calc(2rem + 3vw), calc(4rem));
-    --h2Font : clamp(1.2rem, calc(1rem + 1vw), 3rem);
-    --h3Font : 3rem;
+    --normalBody : clamp(1rem, calc(1rem + 0.1vw), 1.4rem);
 }
 
 *{
@@ -24,7 +18,7 @@
     box-sizing: border-box;
     padding: 0;
     color: var(--secondaryWhite);
-    font-family: var(--quickFont);
+    font-family: var(--font);
     font-size: var(--normalBody);
     letter-spacing: 0.1ch;
 }
@@ -45,9 +39,4 @@ h2{
 a {
     color: inherit;
     text-decoration: none;
-}
-@font-face {
-    font-family: "pixelify";
-    font-weight: normal;
-    src: url("/fonts/pixelify_sans/PixelifySans-Regular.ttf");
 }

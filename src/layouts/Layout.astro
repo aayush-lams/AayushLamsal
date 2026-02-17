@@ -3,7 +3,7 @@ import "@styles/global.css";
 import "@styles/freqStyles.css";
 import Navbar  from '@components/navbar/Navbar.astro';
 import Cursor from "@components/cursor/Cursor.astro";
-import Footer from "@components/footer/Footer.astro";
+import Connect from "@components/connect/Connect.astro";
 ---
 
 <!doctype html>
@@ -17,39 +17,35 @@ import Footer from "@components/footer/Footer.astro";
 	</head>
 	<body>
 	    <Cursor />
-	    <Navbar />
+		<Navbar />
 		<slot />
-		<Footer />
+		<Connect />
 	</body>
 </html>
 
 <style>
-	html,
-	body {
+	html {
 		margin: 0;
 		padding: 0;
-		width: 100vw;
-		background-color: var(--secondary);
-		cursor: none;
+		max-width: 100vw;
+		max-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/*cursor: none;*/
 	}
-	body{
-	    position: relative;
-	    background-image: url("/background.png");
-	    background-size: cover;
-	    background-position: center;
-					background-repeat: no-repeat;
-		background-attachment: fixed;
-		z-index: 0;
-	}
-	body::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.78);
-        background-attachment: fixed;
-        z-index: -1;
-	}
+	body {
+	    background-color: var(--secondary);
+        width: min(80vw, 1920px);
+        height: min(100vh, 1080px);
+        display: flex;
+        justify-content: center;
+        /*align-items: center;*/
+    }
+    @media screen and (max-width: 1000px) {
+      body {
+          display: flex;
+          flex-direction: column;
+      }
+    }
 </style>

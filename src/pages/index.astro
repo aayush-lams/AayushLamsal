@@ -1,12 +1,36 @@
 ---
-import HOME    from '@components/home/Homepage.astro';
 import Layout  from '@layouts/Layout.astro';
-import Works   from '@components/works/Works.astro';
 ---
 
 <Layout>
-    <HOME />
-    <Works />
+    <section>
+        <div class="pageMain">
+            <div class="pageHead">
+                &gt ABOUT ME &gt <br><br>
+            </div>
+            &gt Hi, I am <span>Aayush Lamsal</span>.<br/>
+            &gt I am a software developer and an systems security enthusiast from Nepal.<br/>
+            <br>
+            &gt I love programming, painting and gaming.<br/>
+            &gt Well, take a look around and get to know me better ...<br/>
+        </div>
+    </section>
 </Layout>
 
-<script src = "@scripts/index.ts"> </script>
+<style>
+    section{
+        /*background-color: forestgreen;*/
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .pageMain span{
+        color: var(--primaryRed);
+        font-weight: bold;
+    }
+</style>
+<!-- <script src = "@scripts/index.ts"> </script> -->
