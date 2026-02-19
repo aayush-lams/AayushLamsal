@@ -7,7 +7,7 @@ draft: false
 ---
 <br> 
     
-### Hello guys its my first blog <br/>
+### Hello !!!<br/>
 <br>
-Ok this is the start of my blogs. I will keep posting on this site soon.
+this is the start of my blogs. I will keep posting on this site soon.
 See ya soon
