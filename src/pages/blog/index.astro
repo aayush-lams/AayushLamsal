@@ -1,20 +1,28 @@
 ---
 import Layout  from '@layouts/Layout.astro';
 import blogs from '@data/Blogs.json';
+import { getCollection } from 'astro:content';
+
+console.log("kajsdlfkjas")
+const posts = await getCollection('blog', ({data}) => {
+    console.log("asdlkfjasdf", data);
+    return !data.draft;
+});
+console.log("kajsdlfkjas")
 ---
 
 <Layout>
-    <section>
+    <section class="pageSection">
         <div class="pageMain">
             <div class="pageHead">
                 &gt MY BLOGS &gt <br><br>
             </div>
             <ul>
-                {blogs.map((blog) => (
+                {posts.map((post) => (
                 <li>
-                    <a href={blog.link}>
-                        <div class="workName">&gt {blog.title} &gt</div>
-                        <div class="workDescription">{blog.description}</div>
+                    <a href={`/blog/${post.slug}`}>
+                        <div class="workName">&gt {post.data.title} &gt</div>
+                        <div class="workDescription">{post.data.description}</div>
                     </a>
                 </li>
                 ))}

@@ -8,5 +8,10 @@
       "title" : "Pasm",
       "description" : "A minimalistic terminal based password manager writter in Rust. ",
       "link" : "https://github.com/aayush-lams/pasm"
+    },
+    {
+        "title" : "Riptide",
+        "description" : "Riptide is a modular, Rust-based framework for building highly customizable and extensible text editors inspired by the design philosophy of Emacs. I am currently working on it as my major project",
+        "link" : "https://github.com/adrsha/RIPTIDE"
     }
 ]
