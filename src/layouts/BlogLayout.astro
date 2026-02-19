@@ -1,0 +1,47 @@
+---
+import "@styles/global.css";
+import "@styles/freqStyles.css";
+
+const { title, date, theme } = Astro.props;
+---
+<main class:list={["container", theme]}>
+    <div class="pageMain">
+        <header class="blog-header">
+          <p class="date">{date}</p>
+          <h1>{title}</h1>
+          <hr />
+        </header>
+
+        <article class="content">
+          <slot />
+        </article>
+    </div>
+</main>
+<style>
+.container {
+    /*max-width: 800px;*/
+    /*margin: 80px auto;*/
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .blog-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .date {
+    color: #888;
+    font-size: 0.9rem;
+  }
+
+  .content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+</style>

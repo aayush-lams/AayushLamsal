@@ -1,15 +1,16 @@
 ---
 import Layout  from '@layouts/Layout.astro';
+import Logo from '@components/logo/Logo.astro';
 ---
 
 <Layout>
-    <section>
+    <section class="pageSection">
         <div class="pageMain">
             <div class="pageHead">
                 &gt ABOUT ME &gt <br><br>
             </div>
             &gt Hi, I am <span>Aayush Lamsal</span>.<br/>
-            &gt I am a software developer and an systems security enthusiast from Nepal.<br/>
+            &gt I am a software developer  and an systems security enthusiast from Nepal.<br/>
             <br>
             &gt I love programming, painting and gaming.<br/>
             &gt Well, take a look around and get to know me better ...<br/>
@@ -28,9 +29,14 @@ import Layout  from '@layouts/Layout.astro';
         align-items: flex-start;
         padding: 1rem;
     }
+
     .pageMain span{
-        color: var(--primaryRed);
+        font-family: var(--fancy_font);
+        font-size: 2rem;
         font-weight: bold;
+    }
+    .pageMain span:first-of-type{
+        text-decoration: underline;
     }
 </style>
 <!-- <script src = "@scripts/index.ts"> </script> -->
