@@ -17,13 +17,18 @@ const items = [
     <div class="myName">
         Aayush Lamsal
     </div>
-    <ul>
-        {items.map((item) => (
-        <li class={currentPath == item.href ? "active" : ""}>
-            <a href={item.href}>- {item.name}</a>
-        </li>
-        ))}
-    </ul>
+    <div class="navOption">
+        <div class="navDropper">
+            =
+        </div>
+        <ul>
+            {items.map((item) => (
+            <li class={currentPath == item.href ? "active" : ""}>
+                <a href={item.href}>- {item.name}</a>
+            </li>
+            ))}
+        </ul>
+    </div>
 </nav>
 
 <style>
@@ -37,8 +42,15 @@ const items = [
         align-items: center;
         gap: 2rem;
         outline: 2px solid var(--secondaryWhiteDim);
+        background-color: var(--secondary);
     }
-
+    .navDropper{
+        display: none;
+        width:  40px;
+        height: 40px;
+        background-color: var(--secondary);
+        outline: 2px double grey;
+    }
     .myName{
         font-family: var(--fancy_font);
         font-weight: bolder;
@@ -46,11 +58,13 @@ const items = [
         font-size: 2rem;
     }
     ul{
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 0.5rem;
+        overflow: hidden;
     }
     ul li {
         white-space: nowrap;
@@ -75,7 +89,34 @@ const items = [
     }
     @media screen and (max-width: 1000px) {
         nav {
-            display: none;
+            width: calc(100% - 2rem);
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            position: relative;
+        }
+        nav ul {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            height: 0;
+            /*display: flex;
+            flex-direction: row;*/
+            transition: 0.3s ease;
+        }
+        .navDropper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navOption:hover .navDropper{
+            color: #BEBEBE;
+        }
+        .navOption:hover ul{
+            padding: 0.3rem;
+            height: auto;
+            background-color: var(--secondary);
+            outline: 2px solid var(--secondaryWhiteDim);
         }
     }
 </style>
