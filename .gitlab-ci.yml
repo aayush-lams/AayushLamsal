@@ -1,0 +1,8 @@
+run_tests: # job
+  image: npm:26-alpine3.22
+  before-script:
+#    - apt-get update && apt-get install some other pkg inside python docker
+  scipt:
+    - npm install
+#    - npm test
+    - npm run build
